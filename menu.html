@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - Toko Makanan</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">🍽 Toko Makanan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Judul -->
+<div class="bg-warning text-center text-white py-3">
+  <h4>Daftar Menu</h4>
+  <p>Pilih makanan favorit Anda</p>
+</div>
+
+<!-- Menu -->
+<div class="container my-4">
+  <div class="row g-3">
+
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="pisa.jpg" class="card-img-top" alt="Burger Spesial">
+        <div class="card-body">
+          <h5 class="card-title">Burger Spesial</h5>
+          <p class="card-text">Burger lezat dengan daging sapi pilihan.</p>
+          <button class="btn btn-outline-warning" onclick="lihatHarga(this)">Lihat Harga</button>
+          <p class="mt-2 d-none fw-bold text-warning">Rp25.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="pissa.jpg" class="card-img-top" alt="Pizza Keju">
+        <div class="card-body">
+          <h5 class="card-title">Pizza Keju</h5>
+          <p class="card-text">Pizza tipis dengan keju melimpah.</p>
+          <button class="btn btn-outline-warning" onclick="lihatHarga(this)">Lihat Harga</button>
+          <p class="mt-2 d-none fw-bold text-warning">Rp50.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="ayam.jpg" class="card-img-top" alt="Ayam Crispy">
+        <div class="card-body">
+          <h5 class="card-title">Ayam Crispy</h5>
+          <p class="card-text">Ayam goreng renyah bumbu spesial.</p>
+          <button class="btn btn-outline-warning" onclick="lihatHarga(this)">Lihat Harga</button>
+          <p class="mt-2 d-none fw-bold text-warning">Rp45.000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-warning text-center text-white py-2 mt-4">
+  <small>&copy; 2025 Toko Makanan</small>
+</footer>
+
+<script>
+function lihatHarga(btn) {
+  let harga = btn.nextElementSibling;
+  harga.classList.toggle("d-none");
+  btn.textContent = harga.classList.contains("d-none") ? "Lihat Harga" : "Tutup Harga";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
